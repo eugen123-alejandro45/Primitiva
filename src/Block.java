@@ -2,6 +2,11 @@ import java.util.Arrays;
 
 public class Block {
     private int[] numbers;
+
+    public Block (int[] numbers) {
+        this.numbers = numbers;
+    }
+
     public Block (int numNumbers) {
         if (numNumbers < 6) {
             numNumbers = 6;
@@ -26,6 +31,10 @@ public class Block {
             }
         }
         Arrays.sort(numbers);
+    }
+
+    public int[] getNumbers() {
+        return numbers;
     }
 
     @Override
